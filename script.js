@@ -20,7 +20,7 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
     q12: document.querySelector('input[name="q12"]:checked') ? document.querySelector('input[name="q12"]:checked').value : "non répondu"
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbxODTBLv0cFtFl96GRZcqKDNDjKXn_f_oWJ9cs_8YS42K69KkiNZHZ5juMyoufm--TB1A/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbwn2tEjeDLC1EwN_1oviKFduRo9qccbRI1avQyvIFk02GhqWlZ6Z28nGWSh68xxFfdgIA/exec', {
     method: 'POST',
     mode: 'no-cors',
     cache: 'no-cache',
@@ -36,6 +36,7 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
     alert("Une erreur s'est produite. Veuillez réessayer.");
   });
 });
+
 
 
 
