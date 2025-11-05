@@ -2,7 +2,7 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
   event.preventDefault();
 
   var formData = {
-    nom: document.getElementById("nom").value,
+    nom: document.getElementById("nom").value, // Assure-toi que cette ligne est présente
     q1: document.querySelector('input[name="q1"]:checked') ? document.querySelector('input[name="q1"]:checked').value : "non répondu",
     q2: document.querySelector('input[name="q2"]:checked') ? document.querySelector('input[name="q2"]:checked').value : "non répondu",
     q3: document.querySelector('input[name="q3"]:checked') ? document.querySelector('input[name="q3"]:checked').value : "non répondu",
@@ -17,7 +17,7 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
     q12: document.querySelector('input[name="q12"]:checked') ? document.querySelector('input[name="q12"]:checked').value : "non répondu"
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbyTy6hG7r4Ass48iU1B5Dd2AsBeURHBgOW9cgiZZXjQ2ya5AU3A4WB4XaRuq866K0_BcA/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbzxcbVmIlmzqxdOpd60vyewNJPPPCNZU3exIhSHCuibUfT5CXd7Fwy4eefisT8MS_eoJQ/exec', {
     method: 'POST',
     mode: 'no-cors',
     cache: 'no-cache',
@@ -28,6 +28,7 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
   })
   .then(response => {
     alert("Merci pour vos réponses ! Elles ont été enregistrées.");
+    document.getElementById("criseForm").reset(); // Réinitialise le formulaire après soumission
   })
   .catch(error => {
     alert("Une erreur s'est produite. Veuillez réessayer.");
