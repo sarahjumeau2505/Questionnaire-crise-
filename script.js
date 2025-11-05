@@ -2,6 +2,10 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
   event.preventDefault();
 
   var formData = {
+    var formData = {
+    nom: document.getElementById("nom").value,
+    q1: document.querySelector('input[name="q1"]:checked') ? document.querySelector('input[name="q1"]:checked').value : "non répondu",
+    q2: document.querySelector('input[name="q2"]:checked') ? document.querySelector('input[name="q2"]:checked').value : "non répondu",
     q1: document.querySelector('input[name="q1"]:checked') ? document.querySelector('input[name="q1"]:checked').value : "non répondu",
     q2: document.querySelector('input[name="q2"]:checked') ? document.querySelector('input[name="q2"]:checked').value : "non répondu",
     q3: document.querySelector('input[name="q3"]:checked') ? document.querySelector('input[name="q3"]:checked').value : "non répondu",
@@ -32,4 +36,5 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
     alert("Une erreur s'est produite. Veuillez réessayer.");
   });
 });
+
 
