@@ -16,7 +16,7 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
     q12: document.querySelector('input[name="q12"]:checked') ? document.querySelector('input[name="q12"]:checked').value : "non répondu"
   };
 
-  fetch('TON_URL_APPS_SCRIPT', {
+  fetch('https://script.google.com/macros/s/AKfycbyTy6hG7r4Ass48iU1B5Dd2AsBeURHBgOW9cgiZZXjQ2ya5AU3A4WB4XaRuq866K0_BcA/exec', {
     method: 'POST',
     mode: 'no-cors',
     cache: 'no-cache',
@@ -32,3 +32,4 @@ document.getElementById("criseForm").addEventListener("submit", function(event) 
     alert("Une erreur s'est produite. Veuillez réessayer.");
   });
 });
+
